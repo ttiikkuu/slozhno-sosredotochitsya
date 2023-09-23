@@ -13,7 +13,7 @@
   */
   --background-color: #fff1f7;
   --intro-text-color: #353430;
-  --background-image: center center url(../images/cover-image-light.png) no-repeat;
+  --background-image: top center url(../images/cover-image-light.png) fixed no-repeat;
   --text-color: var(--intro-text-color);
   --main-headline-color: #FFC2E6;
   --headline-h2-color: var(--intro-text-color);
@@ -22,6 +22,7 @@
   --rec-visible: none;
   --main-headline-shadow: var(--accent-color);
   --rec-width: 25px;
+  --header__rec-text-width: 0;
   --focus-element-border: var(--text-color);
   --menu-button-active: var(--text-color);
   --menu-button-text-color: var(--text-color);

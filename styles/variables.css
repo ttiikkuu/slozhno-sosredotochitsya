@@ -2,3 +2,24 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --background-color: #000028;
+  --intro-text-color: var(--background-color);
+  --accent-color: #FF0070;
+  --text-color: #F1B2CE;
+  --main-headline-color: #DB00FF;
+  --background-image: center center url(../images/cover-image-dark.png) no-repeat;
+  --rec-visible: inline-block;
+  --main-headline-shadow: var(--accent-color);
+  --headline-h2-color: var(--accent-color);
+  --headline-h3-color: var(--background-color);
+  --headline-h4-color: var(--background-color);
+  --focus-element-border: var(--accent-color);
+  --rec-width: 58px;
+  --menu-button-active: var(--accent-color);
+  --menu-button-text-color: var(--accent-color);
+  --menu-button-hover-color: #ff91c1;
+  --main-headline-shadow: var(--accent-color);
+  --link-shadow-color: var(--accent-color);
+  --link-hover-color: var(--text-color);
+} 

@@ -2,4 +2,396 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: IBM Plex Mono;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+h1 {
+  color: var(--main-headline-color);
+  text-shadow: 4px 4px 0px var(--main-headline-shadow);
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  margin-bottom: 55px;
+}
+
+h2 {
+  color: var(--headline-h2-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  margin-bottom: 20px;
+}
+
+
+h3 {
+  color: var(--headline-h3-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  background: var(--accent-color);
+  margin-bottom: 10px
+}
+
+h4 {
+  background: var(--accent-color);
+  color: var(--headline-h4-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+  margin: 20px 0 10px 0;
+}
+
+.accent-link {
+  text-decoration: none;
+  text-shadow: 1px 1px 0px var(--link-shadow-color);
+}
+
+.accent-link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.accent-link:focus {
+  outline: 0;
+}
+
+.accent-link:focus-visible {
+  border: 1px solid var(--text-color);
+}
+
+.header {
+  padding: 10px;
+  display: grid;
+  margin: 0 0 40px 0;
+}
+
+.rec {
+  position: absolute;
+  inset-inline-start: calc(100% - (var(--rec-width) + 10px));
+  display: grid;
+  grid-template-columns: 33px 25px;
+  font-size: 18px;
+  color: var(--accent-color);
+}
+
+.rec-text {
+  display: var(--rec-visible);
+  text-transform: uppercase;
+}
+
+.rec-bulb {
+  display: grid;
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid var(--focus-element-border);
+  border-right: 1px solid var(--focus-element-border);
+}
+
+.rec-bulb-dot {
+  display: var(--rec-visible);
+  font-size: 48px;
+  line-height: 0;
+  filter: blur(1.2px);
+  margin: 8px 0 0 -2px;
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: end;
+  margin: 66.5px 0;
+}
+
+.header__theme-menu-button {
+  padding: 1px 15px 4px 15px;
+  font-size: 18px;
+  color: var(--menu-button-text-color);
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  background: none;
+  border: 0;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--menu-button-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--menu-button-hover-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--menu-button-active);
+  pointer-events: none;
+}
+
+.header__theme-menu-item {
+  margin: 0 0 13px 0;
+}
+
+.header__theme-menu-item:last-child {
+  margin: 0;
+}
+
+.decorated-zone {
+  background: var(--background-image);
+  background-size: cover;
+}
+
+.intro-text {
+  background: var(--accent-color);
+  color: var(--intro-text-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  margin-bottom: 31px;
+}
+
+.header__left-bottom-corner-focus {
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--focus-element-border);
+  border-bottom: 1px solid var(--focus-element-border);
+}
+
+.section__text-block {
+  padding: 0 10px;
+}
+
+.section__text-block p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+  margin-bottom: 20px;
+}
+
+.pochemu-sosredotochitsya-tak-slozhno,
+.chto-snizhaet-kontsentratsiyu-vnimaniya {
+  margin: 0 0 50px 0;
+}
+
+.images-container {
+  margin: 50px 0 40px 0;
+}
+
+.footer {
+  display: grid;
+  align-content: space-between;
+  height: 667px;
+  padding: 10px;
+}
+
+.footer__top-right-corner-focus {
+  justify-self: end;
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid var(--focus-element-border);
+  border-right: 1px solid var(--focus-element-border);
+}
+
+.footer h2 {
+  margin: auto;
+  color: var(--main-headline-color);
+  text-shadow: 2px 2px 0px var(--main-headline-shadow);
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+}
+
+.footer__bottom-left-corner-focus {
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid var(--focus-element-border);
+  border-left: 1px solid var(--focus-element-border);
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 20px;
+    margin: 0 0 60px 0;
+  }
+
+  .rec {
+    inset-inline-start: calc(100% - (var(--rec-width) + 20px));
+  }
+
+  .header__theme-menu {
+    margin: 173.5px 0 174.5px 0;
+  }
+
+  h1 {
+    margin: 0 0 162px -20px;
+    font-size: 120px;
+  }
+
+  .intro-text {
+    justify-self: end;
+    width: 364px;
+    margin: 0 0 138px 0;
+  }
+  
+  .section__text-block {
+    padding: 0 20px;
+  }
+  
+  .pochemu-sosredotochitsya-tak-slozhno {
+    display: grid;
+    grid-template-columns: 236px 2fr;
+    column-gap:  20px;
+    margin: 0 0 60px 0;
+  }
+  
+  .chto-snizhaet-kontsentratsiyu-vnimaniya {
+    margin: 0 0 80px 0;
+  }
+
+  .chto-snizhaet-kontsentratsiyu-vnimaniya h2 {
+    width: 236px;
+  }
+
+  .kak-kontsentrirovatsya-luchshe-chem-zolotaya-rybka {
+    display: grid;
+    grid-template-columns: 236px 2fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+    "kak-kontsentrirovatsya-luchshe-chem-zolotaya-rybka-h2 column_third_section"
+    "images-container images-container";
+    column-gap:  20px;
+    row-gap: 59px;
+  }
+
+  .kak-kontsentrirovatsya-luchshe-chem-zolotaya-rybka h2 {
+    grid-area: kak-kontsentrirovatsya-luchshe-chem-zolotaya-rybka-h2;
+  }
+
+  .column_third_section {
+    grid-area: column_third_section;
+  }
+
+  .images-container {
+    grid-area: images-container;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 192px 230px 318px;
+    grid-template-areas:
+    "images-container-h3 images-container-h3 images-container-h3"
+    "image-sunset image-sunset image-ice-cream"
+    "image-tape image-books image-ice-cream"
+    "image-tape image-street image-street";
+    margin: 0 0 60px 0;
+  }
+
+  .images-container img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .images-container h3 {
+    grid-area: images-container-h3;
+    margin-bottom: 0;
+  }
+  
+  .image-sunset {
+    grid-area: image-sunset;
+  }
+
+  .image-ice-cream {
+    grid-area: image-ice-cream;
+  }
+
+  .image-tape {
+    grid-area: image-tape;
+  }
+
+  .image-books {
+    grid-area: image-books;
+  }
+
+  .image-street {
+    grid-area: image-street;
+  }
+
+  .footer {
+    padding: 20px;
+    height: 1024px;
+  }
+
+  .footer h2 {
+    font-size: 120px;
+  } 
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 157px;
+    margin-bottom: 114px;
+  }
+  
+  .intro-text {
+    width: 491px;
+    margin-bottom: 89px;
+  }
+  
+  .decorated-zone {
+    display: grid;
+  }
+
+  .header__theme-menu {
+    display: grid;
+    justify-content: center;
+    margin: 0 0 273px 0;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 0;
+    column-gap: 7px;
+  }
+
+  .header__theme-menu-item {
+    margin: 0;
+  }
+
+  .pochemu-sosredotochitsya-tak-slozhno, 
+  .kak-kontsentrirovatsya-luchshe-chem-zolotaya-rybka {
+    grid-template-columns: 315px 2fr;
+  }
+
+  .chto-snizhaet-kontsentratsiyu-vnimaniya {
+    margin: 0 0 60px 0;
+  }
+
+  .column_second_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+  .chto-snizhaet-kontsentratsiyu-vnimaniya h2 {
+    width: 315px;
+  }
+
+  .images-container {
+    grid-template-rows: auto 260px 315px 433px;
+  }
+
+  .footer {
+    height: 768px;
+  }
+
+  .footer h2 {
+    font-size: 157px;
+  }
 }
